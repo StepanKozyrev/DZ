@@ -1,0 +1,27 @@
+using System;
+
+namespace массив
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите элементы массивы");
+            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            
+            int max = array[0];
+            int sum = 0;
+            Console.Write("Обратный массив = ");
+            for (int i = array.Length-1; i >= 0; i--)
+            {
+                Console.Write(array[i] + " ");
+                sum += array[i];
+                if (max < array[i])
+                {
+                    max = array[i];
+                }
+            }
+            Console.Write("\n" + "Макс. элемент массива = {0}", max);
+        }
+    }
+}
