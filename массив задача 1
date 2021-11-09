@@ -7,10 +7,11 @@ namespace массив
         static void Main(string[] args)
         {
             Console.WriteLine("Введите элементы массивы");
-            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => double.Parse(s));
             
-            int max = array[0];
-            int sum = 0;
+            double max = array[0];
+            double sum = 0;
+            double sr = 0;
             Console.Write("Обратный массив = ");
             for (int i = array.Length-1; i >= 0; i--)
             {
@@ -21,7 +22,17 @@ namespace массив
                     max = array[i];
                 }
             }
+            sr = sum / array.Length;
             Console.Write("\n" + "Макс. элемент массива = {0}", max);
+            Console.Write("\n" + "Массив с заменнеными нулевыми значениями на ср.ареф. = ");
+            for (int j = 0; j < array.Length; j++)
+            {
+                if (array[j] == 0)
+                {
+                    array[j] = sr;
+                }
+                Console.Write(array[j] + " ");
+            }
         }
     }
 }
