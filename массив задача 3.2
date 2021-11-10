@@ -1,0 +1,22 @@
+using System;
+
+namespace массив
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] d = new int[8] {1, 15, 54, 23, 5, 6, 7, 8};
+            Console.Write("Преобразованный массив = ");
+            for (int i = 0; i < d.Length; i++)
+            {
+                if (d[i] < 15)
+                {
+                    d[i] = d[i] * 2;
+                }
+                Console.Write(d[i] + " ");
+            }
+            Console.ReadLine();
+        }
+    }
+}
