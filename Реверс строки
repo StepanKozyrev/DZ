@@ -1,0 +1,14 @@
+using System;
+class dadhasda
+{
+
+    static void Main(string[] args)
+    {
+        string s = Console.ReadLine();
+        char[] sReverse = s.ToCharArray();
+        Array.Reverse(sReverse);
+        string b = new string(sReverse);
+        Console.WriteLine(b);
+        Console.ReadLine();
+    }
+}
