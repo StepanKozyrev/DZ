@@ -1,0 +1,21 @@
+using System;
+class dadhasda
+{
+
+    static void Main(string[] args)
+    {
+        string s = Console.ReadLine();
+        char[] sReverse = s.ToCharArray();
+        Array.Reverse(sReverse);
+        string b = new string(sReverse);
+        if (s.ToLower() == b.ToLower())
+        {
+            Console.WriteLine("Polindrom");
+        }
+        else
+        {
+            Console.WriteLine("Ne Polindrom");
+        }
+        Console.ReadLine();
+    }
+}
