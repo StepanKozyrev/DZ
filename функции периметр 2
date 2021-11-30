@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static int Perimetr(int a, int b, int c)
+    {
+        a += b + c;
+        return a;
+    }
+    static void Main(string[] args)
+    {
+        var a = int.Parse(Console.ReadLine());
+        var b = int.Parse(Console.ReadLine());
+        var c = int.Parse(Console.ReadLine());
+        var sum = Perimetr(a, b, c);
+        Console.WriteLine($"Периметр = {sum}");
+        Console.ReadLine();
+
+    }
+}
