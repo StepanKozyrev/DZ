@@ -1,14 +1,13 @@
 using System;
-class dadhasda
-{
-
-    static void Main(string[] args)
+class HelloWorld {
+  static void Main() {
+    Console.Write("Введите строку:");
+    string n = Console.ReadLine();
+    Console.Write("Реверсированная строка: ");
+    
+    for (int i = n.Length - 1; i >= 0; i--)
     {
-        string s = Console.ReadLine();
-        char[] sReverse = s.ToCharArray();
-        Array.Reverse(sReverse);
-        string b = new string(sReverse);
-        Console.WriteLine(b);
-        Console.ReadLine();
+        Console.Write(n[i]);
     }
+  }
 }
